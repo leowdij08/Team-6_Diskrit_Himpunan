@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="Himpunan-TEAM6", 
+    name="HimpunanTEAM6", 
     version="1.0.0",  
     author="Team 6_Leonard_Apryadi_Alfian", 
     author_email="leowidj@gmail.com", 

@@ -1,4 +1,4 @@
-class Himpunan:
+class HimpunanTEAM6:
     def __init__(self, *args):
         self.elements = list(set(args))
 
@@ -35,23 +35,23 @@ class Himpunan:
 
     def __add__(self, other):
         """Menghitung gabungan dua himpunan."""
-        return Himpunan(*(self.elements + other.elements))
+        return HimpunanTEAM6(*(self.elements + other.elements))
 
     def __sub__(self, other):
         """Menghitung selisih dua himpunan."""
-        return Himpunan(*(x for x in self.elements if x not in other.elements))
+        return HimpunanTEAM6(*(x for x in self.elements if x not in other.elements))
 
     def __truediv__(self, other):
         """Menghitung irisan dua himpunan."""
-        return Himpunan(*(x for x in self.elements if x in other.elements))
+        return HimpunanTEAM6(*(x for x in self.elements if x in other.elements))
 
     def __mul__(self, other):
         """Menghitung selisih simetris dua himpunan."""
-        return Himpunan(*((set(self.elements) ^ set(other.elements))))
+        return HimpunanTEAM6(*((set(self.elements) ^ set(other.elements))))
 
     def __pow__(self, other):
         """Menghitung hasil perkalian kartesian dua himpunan."""
-        return Himpunan(*((x, y) for x in self.elements for y in other.elements))
+        return HimpunanTEAM6(*((x, y) for x in self.elements for y in other.elements))
 
     def __abs__(self):
         """Menghitung himpunan kuasa."""
@@ -62,7 +62,7 @@ class Himpunan:
             s = list(iterable)
             return chain.from_iterable(combinations(s, r) for r in range(len(s) + 1))
 
-        return Himpunan(*power_set(self.elements))
+        return HimpunanTEAM6(*power_set(self.elements))
 
     def ListKuasa(self):
         """Menampilkan semua subset yang mungkin dibuat dari himpunan."""
@@ -93,9 +93,9 @@ class Himpunan:
 
 
 # Contoh penggunaan
-S = Himpunan(1, 2, 3, 4, 5, 6, 7, 8, 9)
-h1 = Himpunan(1, 2, 3)
-h2 = Himpunan(3, 4, 5)
+S = HimpunanTEAM6(1, 2, 3, 4, 5, 6, 7, 8, 9)
+h1 = HimpunanTEAM6(1, 2, 3)
+h2 = HimpunanTEAM6(3, 4, 5)
 
 print(len(h1))  # Output: 3
 print(3 in h1)  # Output: True

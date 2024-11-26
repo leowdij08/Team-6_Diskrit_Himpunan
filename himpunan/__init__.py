@@ -1,1 +1,1 @@
-from .himpunan import Himpunan
+from .HimpunanTEAM6 import Himpunan
