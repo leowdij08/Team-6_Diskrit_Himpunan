@@ -3,6 +3,7 @@
 - A. Alfian Tenggara Putra - ⁠0806022310006
 
 Install dependencies kami ```pip install HimpunanHimpunanTEAM6==1.3.1```
+
 Lalu gunakan ```from HimpunanHimpunanTeam6 import HimpunanHimpunanTEAM6```
 
 Contoh penggunaan
