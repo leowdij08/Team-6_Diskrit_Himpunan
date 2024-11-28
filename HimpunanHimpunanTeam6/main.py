@@ -1,4 +1,4 @@
-class HimpunanTEAM6:
+class HimpunanHimpunanTEAM6:
     def __init__(self, *args):
         self.elements = list(set(args))
 
@@ -35,23 +35,23 @@ class HimpunanTEAM6:
 
     def __add__(self, other):
         """Menghitung gabungan dua himpunan."""
-        return HimpunanTEAM6(*(self.elements + other.elements))
+        return HimpunanHimpunanTEAM6(*(self.elements + other.elements))
 
     def __sub__(self, other):
         """Menghitung selisih dua himpunan."""
-        return HimpunanTEAM6(*(x for x in self.elements if x not in other.elements))
+        return HimpunanHimpunanTEAM6(*(x for x in self.elements if x not in other.elements))
 
     def __truediv__(self, other):
         """Menghitung irisan dua himpunan."""
-        return HimpunanTEAM6(*(x for x in self.elements if x in other.elements))
+        return HimpunanHimpunanTEAM6(*(x for x in self.elements if x in other.elements))
 
     def __mul__(self, other):
         """Menghitung selisih simetris dua himpunan."""
-        return HimpunanTEAM6(*((set(self.elements) ^ set(other.elements))))
+        return HimpunanHimpunanTEAM6(*((set(self.elements) ^ set(other.elements))))
 
     def __pow__(self, other):
         """Menghitung hasil perkalian kartesian dua himpunan."""
-        return HimpunanTEAM6(*((x, y) for x in self.elements for y in other.elements))
+        return HimpunanHimpunanTEAM6(*((x, y) for x in self.elements for y in other.elements))
 
     def __abs__(self):
         """Menghitung himpunan kuasa."""
@@ -62,7 +62,7 @@ class HimpunanTEAM6:
             s = list(iterable)
             return chain.from_iterable(combinations(s, r) for r in range(len(s) + 1))
 
-        return HimpunanTEAM6(*power_set(self.elements))
+        return HimpunanHimpunanTEAM6(*power_set(self.elements))
 
     def ListKuasa(self):
         """Menampilkan semua subset yang mungkin dibuat dari himpunan."""
@@ -77,7 +77,7 @@ class HimpunanTEAM6:
 
     def Komplemen(self, universal_set):
         """Menghitung komplemen himpunan terhadap himpunan universal."""
-        return Himpunan(*(x for x in universal_set.elements if x not in self.elements))
+        return HimpunanHimpunanTEAM6(*(x for x in universal_set.elements if x not in self.elements))
 
     def __iadd__(self, item):
         """Menambah elemen ke dalam himpunan."""
@@ -90,31 +90,3 @@ class HimpunanTEAM6:
         if item in self.elements:
             self.elements.remove(item)
         return self
-
-
-# Contoh penggunaan
-S = HimpunanTEAM6(1, 2, 3, 4, 5, 6, 7, 8, 9)
-h1 = HimpunanTEAM6(1, 2, 3)
-h2 = HimpunanTEAM6(3, 4, 5)
-
-print(len(h1))  # Output: 3
-print(3 in h1)  # Output: True
-print(h1 == h2)  # Output: False
-
-h1 += 4  # Menambah elemen 4 ke h1
-print(h1)  # Output: {1, 2, 3, 4}
-
-h3 = h1 / h2  # Irisan
-print(h3)  # Output: {3, 4}
-
-h4 = h1 + h2  # Gabungan
-print(h4)  # Output: {1, 2, 3, 4, 5}
-
-h5 = h1 - h2  # Selisih
-print(h5)  # Output: {1, 2}
-
-h6 = h1.Komplemen(S)  # Komplemen
-print(h6)  # Output: {5, 6, 7, 8, 9}
-
-print(abs(h1))  # Himpunan kuasa
-print(h1.ListKuasa())  # List himpunan kuasa

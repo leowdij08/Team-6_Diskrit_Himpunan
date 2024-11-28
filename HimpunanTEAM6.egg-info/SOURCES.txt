@@ -1,8 +1,0 @@
-README.md
-setup.py
-HimpunanTEAM6.egg-info/PKG-INFO
-HimpunanTEAM6.egg-info/SOURCES.txt
-HimpunanTEAM6.egg-info/dependency_links.txt
-HimpunanTEAM6.egg-info/top_level.txt
-himpunan/HimpunanTEAM6.py
-himpunan/__init__.py
