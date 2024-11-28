@@ -2,11 +2,11 @@
 - Apryadi Dwi Putra Tangalayuk - 0806022310030
 - A. Alfian Tenggara Putra - ⁠0806022310006
 
-Install dependencies kami 'pip install HimpunanHimpunanTEAM6==1.3.1'
-Lalu gunakan 'from HimpunanHimpunanTeam6' import ```HimpunanHimpunanTEAM6```
+Install dependencies kami ```pip install HimpunanHimpunanTEAM6==1.3.1```
+Lalu gunakan ```from HimpunanHimpunanTeam6 import HimpunanHimpunanTEAM6```
 
 Contoh penggunaan
-'S = HimpunanHimpunanTEAM6(1, 2, 3, 4, 5, 6, 7, 8, 9)
+```S = HimpunanHimpunanTEAM6(1, 2, 3, 4, 5, 6, 7, 8, 9)
 h1 = HimpunanHimpunanTEAM6(1, 2, 3)
 h2 = HimpunanHimpunanTEAM6(3, 4, 5)
 
@@ -30,4 +30,4 @@ h6 = h1.Komplemen(S)  # Komplemen
 print(h6)  # Output: {5, 6, 7, 8, 9}
 
 print(abs(h1))  # Himpunan kuasa
-print(h1.ListKuasa())  # List himpunan kuasa'
+print(h1.ListKuasa())  # List himpunan kuasa```
